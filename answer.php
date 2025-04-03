@@ -27,22 +27,21 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/cylinder13086045153593860639.jpg" alt="cylinder image" width="250" />
+        <img src="./images/volume-of-sphere.png" width="250" />
       </div>
       <div class="page-content-php">
-        <div id="area">
+        <div id="volume">
           <?php
           // Retrieve data from the form
           $radiusNumber = $_GET["radius-number"];
-          $heightNumber = $_GET["height-number"];
 
           // Calculate surface area of the cylinder
-          $area = 2 * M_PI * $radiusNumber * ($radiusNumber + $heightNumber);
+          $volume = (4/3) * M_PI * ($radiusNumber ** 3) ;
 
           // Output the result
-          echo "If the cylinder has a radius = " . $radiusNumber . " cm and a height = " . $heightNumber . " cm:<br />";
+          echo "If the sphere has a radius = " . $radiusNumber . " mm<br />";
           echo "<br />";
-          echo "The surface area of the cylinder is " . (round($area, 2)) . " cm².";
+          echo "The volume is:" .(round($volume, 2)) . " mm³.";
           echo "<br />";
           ?>
         </div>
